@@ -315,3 +315,15 @@ transition: color 0.3s ease;
     }
 }
 
+a {
+    text-decoration: none;
+    color: rgb(0, 10, 147);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(0, 10, 147);
+}
