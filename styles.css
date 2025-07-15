@@ -1,0 +1,754 @@
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* <weight>: Use a value from 200 to 800 */
+.bricolage-grotesque {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+/* <weight>: Use a value from 400 to 900 */
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Cambri', sans-serif;
+    min-height: 100vh;
+    background-color: rgb(255, 251, 254);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+#heroSection {
+
+    padding-top: 12vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#Omne {
+    display: flex;
+    background-color: #FFC0CB;
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    padding-left: 200px;
+}
+
+.Text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+.Text p {
+    margin-top: 60px;
+    font-size: 1.6vw;
+    color: rgb(184, 12, 9);
+    font-family: "Playfair Display";
+}
+
+.Text h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    margin-bottom: 80px;
+    text-align: left;
+    font-family: serif;
+    color: rgb(184, 12, 9);
+    font-family: "Bricolage Grotesque";
+}
+
+.DruhaFotka img {
+    height: auto;
+    width: 30vh;
+
+}
+
+.DruhaFotka {
+    width: 100%;
+    align-self: center;
+    padding-left: 200px;
+}
+
+
+#KontaktujteMa h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    margin-bottom: 80px;
+    text-align: left;
+    font-family: serif;
+    color: #FFE4E9;
+    font-family: "Bricolage Grotesque";
+}
+
+#KontaktujteMa {
+    background-color: #432818;
+    width: 100%;
+    height: 100%;
+    margin-top: 250px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+
+}
+
+#KontaktujteMa p {
+    color: #FFE4E9;
+    font-size: 1.6vw;
+    font-family: "Playfair Display";
+    padding-bottom: 56px;
+    line-height: 1.4;
+}
+
+#KontaktujteMa #mail {
+    color: #432818;
+    border-radius: 40px;
+    background-color: #FFE4E9;
+    text-decoration: none;
+    font-family: "Playfair Display";
+    font-size: 1.6vw;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#KontaktujteMa .Text {
+
+    width: 100%;
+    padding-left: 200px;
+}
+
+#KontaktujteMa .Ikonky {
+
+    width: 100%;
+    padding-right: 200px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+#MojeProjekty h5 {
+    text-align: center;
+    font-size: 3.711vw;
+    font-weight: normal;
+    margin-bottom: 80px;
+    color: rgb(0, 0, 0);
+    font-family: "Bricolage Grotesque", sans-serif;
+    padding-top: 120px;
+
+}
+
+.galery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.galery img {
+    width: 100%;
+    /* Ensure the image fits inside the wrapper */
+    transition: transform 0.3s ease;
+    /* Smooth animation */
+    height: 100%;
+    object-fit: cover;
+}
+
+.galery .img-wrapper {
+    overflow: hidden;
+    /* Ensures the border radius stays intact */
+    width: 53vh;
+    height: 36vh;
+    padding-top: 30px;
+}
+
+
+
+.galery img:hover {
+    transform: scale(1.1);
+    /* Zooms in slightly */
+}
+
+
+.galery p {
+    font-family: "Playfair Display";
+    font-size: 16px;
+
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+.galery a {
+    text-decoration: none;
+    /* Removes the underline */
+    color: inherit;
+    /* Inherits the color from the parent element */
+    display: inline-block;
+    /* Makes the entire `a` clickable */
+}
+
+#MojeProjekty .galery a:hover {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.galery h1 {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-style: normal;
+    line-height: 28px;
+    margin: 0;
+}
+
+#MojeProjekty .galery h2 {
+    font-family: "Playfair Display";
+    font-size: 16px;
+    color: rgb(121, 121, 121);
+    text-align: left;
+    margin-top: 16px;
+    font-weight: lighter;
+}
+
+.galery .galeryTex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+.JaFotka {
+    display: flex;
+    justify-content: center;
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.JaFotka img {
+    height: auto;
+    width: 40vh;
+    border-radius: 12px;
+
+}
+
+.scrollBanner {
+    display: flex;
+    --gap: 2rem;
+    gap: var(--gap);
+    overflow: hidden;
+    user-select: none;
+}
+
+.scrollBanner ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    flex-shrink: 0;
+    min-width: 100%;
+    animation: scroll 30s linear infinite;
+}
+
+.scrollBanner {
+    font-size: 40px;
+    font-family: "Playfair Display";
+}
+
+.scrollBanner:hover ul {
+    animation-play-state: paused;
+    /* Pauses the animation */
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
+
+h5 {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+#heroSection h3 {
+    font-weight: normal;
+    font-size: 1.1vw;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 160px;
+    font-family: "Playfair Display";
+}
+
+#KontaktujteMa ul {
+    list-style: none;
+    padding-right: 140px;
+}
+
+#KontaktujteMa ul li {
+    padding: 25px;
+}
+
+#instagram {
+    width: 70px;
+    fill: #FFE4E9;
+    transition: fill 0.5s ease;
+}
+
+#instagram:hover {
+    fill: rgb(254, 181, 193);
+}
+
+#linkedin {
+    width: 80px;
+    fill: #FFE4E9;
+    transition: fill 0.5s ease;
+}
+
+#linkedin:hover {
+    fill: rgb(254, 181, 193);
+}
+
+
+
+#tiktok {
+    width: 70px;
+    fill: #FFE4E9;
+    transition: fill 0.5s ease;
+}
+
+#tiktok:hover {
+    fill: rgb(254, 181, 193);
+}
+
+
+
+/* NAVIGACNY BAR HORE */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 9999;
+    background-color: rgb(255, 251, 254);
+
+
+}
+
+#navbar ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+#navbar ul li :hover {
+    color: rgb(184, 12, 9);
+    transition: color 0.3s ease;
+}
+
+
+#navbar li {
+    height: 50px;
+
+}
+
+#navbar a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 150%;
+    opacity: 100%;
+    font-family: "Bricolage Grotesque";
+    font-weight: 200;
+
+}
+
+#navbar li:first-child {
+    margin-right: auto;
+}
+
+#navbar img
+{
+    width: 50px;
+    padding-right: 10px;
+}
+/*SIDEBAR skrytý*/
+.sidebar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+
+.menu-button {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    /* Add a pointer cursor for clickability */
+}
+
+
+
+
+
+
+
+/* Large devices (laptops/desktops, 1024 and up) */
+@media only screen and (max-width: 1024px) {
+    #Omne {
+        padding-left: 120px;
+    }
+    
+    
+    .Text p {
+        font-size: 2.5vw;
+    }
+    
+    .Text h2 {
+        font-size: 5vw;
+    }
+    #MojeProjekty h5 {
+        font-size: 5vw;
+    }
+    .galery h1 {
+        font-size: 3.5vw;
+    }
+
+    #KontaktujteMa p {
+        font-size: 2.5vw;
+    }
+    
+    #KontaktujteMa #mail {
+        font-size: 2.5vw;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        padding-top: 1.6vw;
+        padding-bottom: 1.6vw;
+    }
+    
+    #KontaktujteMa .Text {
+    
+        padding-left: 120px;
+    }
+    
+    #KontaktujteMa h2
+    {
+        font-size: 5vw;
+    }
+
+    #KontaktujteMa ul {
+        
+        padding-right: 120px;
+    }
+    
+    
+    #instagram {
+        width: 50px;
+    }
+    
+    
+    #linkedin {
+        width: 60px;
+    }
+    
+    #tiktok {
+        width: 50px;
+    }
+
+    #heroSection h3 {
+        font-size: 2vw;
+    }
+
+    .DruhaFotka {
+        width: 50%;
+        align-self: center;
+        padding-right: 80px;
+    }
+
+    .galery p
+    {
+    font-size: 1.6vw;
+    }
+    
+    .galery h2
+    {
+        font-size: 1.6vw;
+    }
+
+    .scrollBanner {
+        font-size: 4vw;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+    #Omne {
+        padding-left: 80px;
+    }
+    
+    
+    .Text p {
+        font-size: 2.8vw;
+    }
+    
+    .DruhaFotka img {
+        height: auto;
+        width: 25vh;
+    
+    }
+    
+    .DruhaFotka {
+        width: 50%;
+        align-self: center;
+        padding-right: 80px;
+    }
+
+
+    .galery h1 {
+        font-size: 3.2vw;
+    }
+
+    .galery p
+{
+font-size: 1.6vw;
+}
+
+.galery h2
+{
+    font-size: 1.6vw;
+}
+
+    #KontaktujteMa p {
+        font-size: 2.5vw;
+    }
+    
+    #KontaktujteMa #mail {
+        font-size: 2.5vw;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        padding-top: 1.6vw;
+        padding-bottom: 1.6vw;
+    }
+    
+    #KontaktujteMa .Text {
+    
+        padding-left: 120px;
+    }
+    
+    #KontaktujteMa h2
+    {
+        font-size: 5vw;
+    }
+
+    #KontaktujteMa ul {
+        
+        padding-right: 120px;
+    }
+    
+    
+    #instagram {
+        width: 50px;
+    }
+    
+    
+    #linkedin {
+        width: 60px;
+    }
+    
+    #tiktok {
+        width: 50px;
+    }
+
+    #heroSection h3 {
+        font-size: 2.5vw;
+    }
+
+    .scrollBanner {
+        font-size: 4vw;
+    }
+    .JaFotka img {
+        width: 20vh;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .DruhaFotka img {
+        width: 20vh;
+    
+    }
+    
+    .DruhaFotka {
+        width: 40%;
+        padding-right: 200px;
+        padding-left: 20px;
+    }
+
+    
+    .JaFotka img {
+        width: 20vh;
+    }
+
+    
+    #Omne {
+        padding-left: 70px;
+    }
+    
+.Text p {
+    margin-top: 40px;
+    font-size: 2.8vw;
+
+}
+
+.Text h2 {
+    font-size: 5vw;
+    margin-bottom: 60px;
+}
+
+
+.galery .img-wrapper {
+    overflow: hidden;
+    /* Ensures the border radius stays intact */
+    width: 570px;
+    height: 366px;
+    padding-top: 30px;
+}
+
+
+.galery h1 {
+    font-size: 4vw;
+}
+
+.galery p
+{
+font-size: 1.8vw;
+}
+
+.galery h2
+{
+font-size: 1.8vw;
+}
+
+#MojeProjekty h5 {
+    font-size: 6vw;
+}
+
+#KontaktujteMa p {
+    font-size: 2.5vw;
+}
+
+#KontaktujteMa #mail {
+    font-size: 2.5vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    padding-top: 1.6vw;
+    padding-bottom: 1.6vw;
+}
+
+#KontaktujteMa .Text {
+
+    padding-left: 80px;
+}
+
+#KontaktujteMa h2
+{
+    font-size: 6vw;
+}
+
+
+#instagram {
+    width: 45px;
+}
+
+
+#linkedin {
+    width: 55px;
+}
+
+#tiktok {
+    width: 45px;
+}
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}

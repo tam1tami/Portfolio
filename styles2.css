@@ -1,0 +1,317 @@
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+
+/* <weight>: Use a value from 200 to 800 */
+.bricolage-grotesque {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+ 
+
+/* <weight>: Use a value from 400 to 900 */
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: 'Cambri', sans-serif;
+    min-height: 100vh;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  
+
+#container
+{
+margin-left: 250px;
+margin-right: 250px;
+}
+
+
+
+  #Fotky
+  {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  #Fotky img {
+    width: 100%; /* Ensure the image fits inside the wrapper */
+    transition: transform 0.3s ease; /* Smooth animation */
+    height: 100%;
+    object-fit: cover;
+      
+  }
+
+  #Fotky video
+  {
+    width: 1300px;
+    height: 800px;
+    border-radius: 40px;
+  }
+  
+  #Fotky .obal
+  {
+    overflow: hidden; /* Ensures the border radius stays intact */ 
+    width: 130vh; 
+    max-height: 70vh;
+    padding-bottom: 15px;
+  }
+  
+  
+.Popis h4
+{
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 14px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    
+}
+
+.Popis
+{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.Popis h2{
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.Popis p{
+    font-size: 20px;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.Popis li{
+    font-size: 20px;
+    list-style: none;
+    line-height: 24px;
+}
+
+.Popis2 p
+{
+max-width: 700px;
+font-size: 32px;
+margin-bottom: 120px;
+line-height: 40px;
+font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.Popis2 h4
+{
+    font-size: 16px;
+    font-weight: lighter; 
+    margin-bottom: 14px;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+
+
+
+footer a {
+    text-decoration: none;
+    Font-family: "Bricolage Grotesque", sans-serif;
+    color: #FFE4E9; /* Text color */
+    border-bottom: 2px solid transparent; /* Invisible underline initially */
+    transition: border-bottom-color 0.3s ease, width 0.3s ease; /* Smooth transition */
+  }
+  
+footer a:hover {
+    border-bottom-color: #FFE4E9; /* Make the underline visible */
+  }
+
+
+footer h1
+{
+    font-size: 70px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    Font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 200;
+}
+
+footer ul
+{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer li:first-child {
+    margin-right: auto;
+    color: #FFE4E9;
+    Font-family: "Bricolage Grotesque", sans-serif;
+    
+}
+
+footer li
+{
+    padding: 30px;
+    
+}
+
+
+footer
+{
+    margin-top: 100px;
+    background-color: #432818;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+
+/* NAVIGACNY BAR HORE */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+#navbar ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+
+}
+
+#navbar ul li :hover{
+color: rgb(184, 12, 9);
+transition: color 0.3s ease; 
+}
+
+
+#navbar li {
+    height: 50px;
+    
+}
+
+#navbar a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 150%;
+    opacity: 100%;
+    font-family: "Bricolage Grotesque";
+    font-weight: 200;
+    
+}
+
+#navbar li:first-child {
+    margin-right: auto;
+}
+
+
+
+
+/*SIDEBAR skrytý*/
+.sidebar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+
+.menu-button {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    /* Add a pointer cursor for clickability */
+}
+
+
+.Popis2 a
+{
+    text-decoration: none;
+    color: rgb(151, 38, 38);
+    line-height: 100px;
+}
+
+.Popis2 .info
+{
+    display: none;
+    color: rgb(151, 38, 38);
+    font-size: 28px;
+}
+
+
+
+@media  (hover: none) and (pointer: coarse) {
+    .Popis2 a {
+      display: none;
+    }
+
+    
+  }
+
+  @media only screen and (max-width:768px)
+{
+    .Popis2 .info
+    {
+        display: block;
+    }
+}
+

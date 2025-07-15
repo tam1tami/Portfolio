@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Tamara Záskalanová </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Birthstone&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Imperial+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hidesidebar()"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+                        viewBox="0 -960 960 960" width="26px" fill="#000000">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="index.html#Omne">O mne</a></li>
+            <li><a href="index.html#MojeProjekty">Projekty</a></li>
+            <li><a href="index.html#KontaktujteMa">Kontakt</a></li>
+
+        </ul>
+        <div id="navbar">
+            <ul>
+                <li> <a href="index.html#heroSection">Portfólio</a></li>
+                <li class="hideOnMobile"><a href="index.html#Omne">O mne</a></li>
+                <li class="hideOnMobile"><a href="index.html#MojeProjekty">Moje výtvory</a></li>
+                <li class="hideOnMobile"><a href="index.html#KontaktujteMa">Kontakt</a></li>
+                <li class="menu-button" onclick="showsidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="container">
+        <div class="Popis">
+            <div>
+                <h4>PROJEKT</h4>
+                <h2>Giana Pineapple</h2>
+            </div>
+            <div>
+                <h4>KLIENT</h4>
+                <p>Osobný projekt</p>
+            </div>
+            <div>
+                <h4>ROK</h4>
+                <p>2023</p>
+            </div>
+            <div>
+                <h4>MOJA ROLA</h4>
+                <ul>
+                    <li>grafický dizajnér </li>
+                    <li>redesign</li>
+                    <li>packaging</li>
+                    <li> ilustrátor</li>
+                </ul>
+            </div>
+            <div>
+                <h4>ZRUČNOSTI</h4>
+                <ul>
+                    <li>kompozícia</li>
+                    <li>typografia</li>
+                    <li>grafický dizajn </li>
+                    <li>mockupy</li>
+                </ul>
+            </div>
+        </div>
+        <div class="Popis2">
+            <h4>O PROJEKTE</h4>
+            <p>Cieľom bolo vytvoriť nový dizajn balenia produktu Giana Ananás kúsky, ktorý by bol vizuálne príťažlivý,
+                čitateľný a jednoducho komunikoval o aký produkt ide.
+                <br>
+                <br>
+                Celý dizajn som stvárnila tak, aby bol čistý a moderný. Vytvorila som 2 verzie dizajnu.
+                <br>
+                <br>
+                 Výsledok bol hravý dizajn, ktorý jasne a pútavo zobrazuje produkt.
+            </p>
+        </div>
+        <div id="Fotky">
+
+            <div id="Fotky">
+                <div class="obal"> <img src="images/giana/rebranding.png" alt="mockup"> </div>
+                <div class="obal"> <img src="images/giana/rebrand.png" alt="mockup"> </div>
+                <div class="obal"> <img src="images/giana/rebrand-07.png" alt="ikony"> </div>
+                <div class="obal"> <img src="images/giana/zelenepozadie.png" alt="nalepky"> </div>
+                <div class="obal"> <img src="images/giana/bezovepozadie-06.png" alt="fotka projektu"> </div>
+                <div class="obal"> <img src="images/giana/rebrand-12.png" alt="projekt"> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <h1> <a href="mailto:tami.zaskalan@gmail.com">Kontaktujte ma.</a> </h1>
+        <ul>
+            <li> tami.zaskalan@gmail.com</li>
+            <li> <a href="https://www.instagram.com/_zaskalka_/" target="_blank">INSTAGRAM</a></li>
+            <li> <a href="https://www.linkedin.com/in/tamara-z-21629732a/" target="_blank">LINKEDIN</a></li>
+            <li> <a href="https://www.tiktok.com/@tamimami4" target="_blank">TIKTOK</a></li>
+        </ul>
+    </footer>
+
+    <script>
+
+        let prevScrollPos = window.pageYOffset;
+        let navbar = document.getElementById("navbar");
+
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.transition = "top 0.3s ease"; // Add smooth transition
+                navbar.style.top = "0"; // Show navbar
+            } else {
+                navbar.style.transition = "top 0.3s ease"; // Add smooth transition
+                navbar.style.top = "-50px"; // Hide navbar
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+
+</body>
+
+</html>

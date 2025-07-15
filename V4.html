@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            color: #333;
+        }
+        .game-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+      
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #previous-guesses {
+            margin-top: 10px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .stat-box {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            width: 30%;
+        }
+
+        #guess-button {
+            background-color: #ffc1e3; /* Initially light pink like new game button */
+        }
+
+        #guess-button.active {
+            background-color: #ff1493; /* Dark pink after first guess */
+        }
+
+        #new-game-button {
+            background-color: #ffc1e3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    
+    <div class="game-container">
+        <p>I'm thinking of a number between <span id="min-range">1</span> and <span id="max-range">100</span>.</p>
+        <p>Can you guess what it is?</p>
+        
+        <div>
+            <input type="number" id="guess-input" min="1" max="100" placeholder="Enter your guess">
+            <button id="guess-button">Guess</button>
+            <button id="new-game-button">New Game</button>
+        </div>
+        
+        <div id="message"></div>
+        <div id="previous-guesses">Previous guesses: </div>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <p>Attempts</p>
+                <p id="attempts">0</p>
+            </div>
+            <div class="stat-box">
+                <p>Games Won</p>
+                <p id="games-won">0</p>
+            </div>
+            <div class="stat-box">
+                <p>Best Score</p>
+                <p id="best-score">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Game variables
+        let minNumber = 1;
+        let maxNumber = 100;
+        let targetNumber;
+        let attempts = 0;
+        let gamesWon = 0;
+        let bestScore = null;
+        let previousGuesses = [];
+        let gameActive = true;
+        let gameAlreadyInitialized = false; // 🆕 ochrana
+    
+        // DOM elements
+        const guessInput = document.getElementById('guess-input');
+        const guessButton = document.getElementById('guess-button');
+        const newGameButton = document.getElementById('new-game-button');
+        const messageElement = document.getElementById('message');
+        const previousGuessesElement = document.getElementById('previous-guesses');
+        const attemptsElement = document.getElementById('attempts');
+        const gamesWonElement = document.getElementById('games-won');
+        const bestScoreElement = document.getElementById('best-score');
+        const minRangeElement = document.getElementById('min-range');
+        const maxRangeElement = document.getElementById('max-range');
+    
+        // Initialize the game
+        function initGame() {
+            if (gameAlreadyInitialized) return; // 🛡️ zabránime reštartovaniu
+            gameAlreadyInitialized = true;
+    
+            console.log("Hra sa inicializuje... 😎");
+    
+            targetNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+            attempts = 0;
+            previousGuesses = [];
+            gameActive = true;
+    
+            // Update UI
+            messageElement.textContent = "Make your first guess!";
+            messageElement.style.color = "black";
+            previousGuessesElement.textContent = "Previous guesses: ";
+            attemptsElement.textContent = attempts;
+            guessInput.value = "";
+    
+            // Set range display
+            minRangeElement.textContent = minNumber;
+            maxRangeElement.textContent = maxNumber;
+    
+            // Load saved stats
+            loadGameStats();
+    
+            // Enable guess input and button, disable new game button
+            guessInput.disabled = false;
+            guessButton.disabled = false;
+            newGameButton.disabled = true;
+    
+            // Reset guess button to light pink color
+            guessButton.classList.remove('active');
+    
+            // Set focus on input
+            guessInput.focus();
+        }
+    
+        // Process the player's guess
+        function processGuess() {
+            if (!gameActive) return;
+    
+            const guess = parseInt(guessInput.value);
+    
+            // Validate input
+            if (isNaN(guess) || guess < minNumber || guess > maxNumber) {
+                messageElement.textContent = `Please enter a valid number between ${minNumber} and ${maxNumber}.`;
+                messageElement.style.color = "red";
+                return;
+            }
+    
+            // Increase attempts
+            attempts++;
+            attemptsElement.textContent = attempts;
+    
+            // Add to previous guesses
+            previousGuesses.push(guess);
+            previousGuessesElement.textContent = "Previous guesses: " + previousGuesses.join(", ");
+    
+            // Check the guess
+            if (guess === targetNumber) {
+                // Player wins
+                messageElement.textContent = `Congratulations! You guessed the number in ${attempts} attempts!`;
+                messageElement.style.color = "green";
+                gameActive = false;
+                guessInput.disabled = true;
+                guessButton.disabled = true;
+    
+                // Enable new game button when game is won
+                newGameButton.disabled = false;
+    
+                // Update stats
+                gamesWon++;
+                gamesWonElement.textContent = gamesWon;
+    
+                if (bestScore === null || attempts < bestScore) {
+                    bestScore = attempts;
+                    bestScoreElement.textContent = bestScore;
+                }
+    
+                // Save stats
+                saveGameStats();
+            } else if (guess < targetNumber) {
+                messageElement.textContent = "Too low! Try a higher number.";
+                messageElement.style.color = "blue";
+            } else {
+                messageElement.textContent = "Too high! Try a lower number.";
+                messageElement.style.color = "orange";
+            }
+    
+            // Clear input and set focus
+            guessInput.value = "";
+            guessInput.focus();
+        }
+    
+        // Save game statistics to localStorage
+        function saveGameStats() {
+            localStorage.setItem('numberGuessingGameStats', JSON.stringify({
+                gamesWon: gamesWon,
+                bestScore: bestScore
+            }));
+        }
+    
+        // Load game statistics from localStorage
+        function loadGameStats() {
+            const savedStats = localStorage.getItem('numberGuessingGameStats');
+            if (savedStats) {
+                const stats = JSON.parse(savedStats);
+                gamesWon = stats.gamesWon || 0;
+                bestScore = stats.bestScore || null;
+    
+                gamesWonElement.textContent = gamesWon;
+                bestScoreElement.textContent = bestScore === null ? "-" : bestScore;
+            }
+        }
+    
+        // Event listeners
+        guessButton.addEventListener('click', processGuess);
+        newGameButton.addEventListener('click', function () {
+            gameAlreadyInitialized = false; // umožní nový štart
+            initGame();
+        });
+    
+        // Allow pressing Enter to submit guess
+        guessInput.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                processGuess();
+            }
+        });
+    
+        // Change button color when input receives a number
+        guessInput.addEventListener('input', function () {
+            if (guessInput.value.trim() !== '') {
+                guessButton.classList.add('active');
+            } else {
+                guessButton.classList.remove('active');
+            }
+        });
+    
+        // Initialize the game when the page loads
+        window.addEventListener('load', initGame);
+    </script>
+    
+</body>
+</html>

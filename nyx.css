@@ -1,0 +1,464 @@
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* <weight>: Use a value from 200 to 800 */
+.bricolage-grotesque {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+/* <weight>: Use a value from 400 to 900 */
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imperial-script-regular {
+    font-family: "Imperial Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.great-vibes-regular {
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+}
+
+.draggable {
+    position: absolute;
+    z-index: 9;
+}
+
+
+#strom {
+    padding-top: 50px;
+    justify-self: center;
+    align-self: center;
+
+}
+
+#strom img {
+    width: 550px;
+}
+
+
+/* NAVIGACNY BAR HORE */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+#navbar ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+#navbar ul li :hover {
+    color: rgb(184, 12, 9);
+    transition: color 0.3s ease;
+}
+
+
+#navbar li {
+    height: 50px;
+
+}
+
+#navbar a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 150%;
+    opacity: 100%;
+    font-family: "Bricolage Grotesque";
+    font-weight: 200;
+
+}
+
+#navbar li:first-child {
+    margin-right: auto;
+}
+
+
+
+
+/*SIDEBAR skrytý*/
+.sidebar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+}
+
+.menu-button {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    /* Add a pointer cursor for clickability */
+}
+
+
+.nadpis button {
+    color: rgb(255, 237, 237);
+    background-color: rgb(151, 38, 38);
+    border-radius: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 24px;
+    font-family: "italiana", sans-serif;
+    border-style: none;
+    align-self: center;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.nadpis h1 {
+    margin-top: 50px;
+    font-size: 80px;
+    font-family: "Imperial Script", serif;
+    color: rgb(151, 38, 38);
+    text-align: center;
+}
+
+.nadpis {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nadpis img {
+    margin-top: 150px;
+    align-self: center;
+    width: 150px;
+}
+
+
+#darcek {
+    width: 200px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.division {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.division p {
+    align-self: flex-start;
+    transform: translate(150px, 200px);
+    font-size: 24px;
+    font-family: "italiana", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+
+
+
+
+
+
+
+
+#hotovo {
+    color: rgb(151, 38, 38);
+    font-size: 24px;
+    font-family: "italiana", sans-serif;
+    border-style: none;
+    align-self: center;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+#efect {
+    position: fixed;
+    /* Sit on top of the page content */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    display: none;
+    /* Hidden by default */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 999;
+    /* Specify a stack order in case you're using a different order for other elements */
+    justify-content: center;
+    align-items: center;
+}
+
+#close {
+    background-color: white;
+    border-style: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#overlay {
+    display: flex;
+    position: relative;
+    /* Position inside the overlay container */
+    background-color: #fff;
+    /* White background for content */
+    padding: 20px;
+    /* Add some padding */
+    border-radius: 8px;
+    /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#overlay h1 {
+    margin: 0;
+    margin-top: 40px;
+    font-family: "Bricolage Grotesque";
+    font-size: 40px;
+    color: rgb(151, 38, 38);
+    text-align: center;
+    font-weight: 200;
+}
+
+#overlay h2 {
+    font-family: "Bricolage Grotesque";
+    font-size: 20px;
+    color: antiquewhite;
+    text-align: center;
+    background-color: rgb(151, 38, 38);
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: lighter;
+}
+
+#overlay h5 {
+    font-family: "Bricolage Grotesque";
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(151, 38, 38);
+    margin: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#overlay img {
+    width: 500px;
+    align-self: center;
+}
+
+#overlay .checked {
+    color: rgb(173, 74, 171);
+}
+
+#overlay .rating .halfchecked {
+    background: linear-gradient(to right, rgb(173, 74, 171)50%, rgb(233, 233, 233) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+#overlay .rating {
+    flex-direction: row;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 2px;
+}
+
+#overlay h3 {
+    font-family: "Inter";
+    font-size: 24px;
+    margin: 0;
+}
+
+#overlay h4 {
+    font-family: "Inter";
+    font-weight: 300;
+}
+
+#overlay strike {
+    font-family: "Inter";
+    font-size: 14px;
+    text-align: center;
+}
+
+#overlay p {
+    font-family: "Inter";
+    font-size: 20px;
+}
+
+#overlay h6 {
+    font-family: "Inter";
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(151, 38, 38);
+    color: antiquewhite;
+    border-radius: 14px;
+    width: 130px;
+    justify-self: center;
+}
+
+#overlay a {
+    text-decoration: none;
+}
+
+.text {
+    padding: 20px;
+}
+
+#hotovo {
+    margin-top: 30px;
+}
+
+#makeup {
+    background-color: aqua;
+}
+
+.a {
+    position: absolute;
+    bottom: 450px;
+    left: 200px;
+    cursor: move;
+    width: 150px;
+}
+
+.b {
+    position: absolute;
+    bottom: 450px;
+    left: 250px;
+    cursor: move;
+    width: 150px;
+}
+
+.c {
+    position: absolute;
+    bottom: 500px;
+    left: 220px;
+    cursor: move;
+    width: 150px;
+}
+
+.d {
+    position: absolute;
+    bottom: 510px;
+    left: 120px;
+    cursor: move;
+    width: 150px;
+}
+
+.e {
+    position: absolute;
+    bottom: 450px;
+    left: 130px;
+    cursor: move;
+    width: 150px;
+}
+
+.f {
+    position: absolute;
+    bottom: 470px;
+    left: 200px;
+    cursor: move;
+    width: 150px;
+}
+
+.g {
+    position: absolute;
+    bottom: 470px;
+    left: 180px;
+    cursor: move;
+    width: 150px;
+}
+
+.h {
+    position: absolute;
+    bottom: 450px;
+    left: 150px;
+    cursor: move;
+    width: 150px;
+}
+
+.i {
+    position: absolute;
+    bottom: 450px;
+    left: 200px;
+    cursor: move;
+    width: 150px;
+}
+
+.j {
+    position: absolute;
+    bottom: 450px;
+    left: 100px;
+    cursor: move;
+    width: 150px;
+}
+
+.box {
+    width: 400px;
+    position: relative;
+    bottom: 400px;
+    left: 40px;
+    margin: 0;
+    display: block;
+}
+
+
